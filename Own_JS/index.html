@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="number"></div>
+
+    </div>
+    <script>
+        
+        let number12=document.querySelector('.number');
+       number=1;
+       let value= setInterval(()=>{
+             number++;
+             number12.textContent=number;
+             if(value==7){
+            return clearInterval(value);
+        }
+        },1000)
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "products": [
+    {
+      "name": "Oppo",
+      "price": "24343",
+      "category": "mobiles",
+      "link": "https://en.wikipedia.org/wiki/Oppo",
+      "id": "0536"
+    },
+    {
+      "id": "4ce4",
+      "name": "edwe",
+      "price": "2343",
+      "category": "mobiles",
+      "link": "https://en.wikipedia.org/wiki/Vivo_(technology_company)"
+    },
+    {
+      "id": "110d",
+      "name": "4ref",
+      "price": "2343543",
+      "category": "laptops"
+    },
+    {
+      "id": "ea16",
+      "name": "ree",
+      "price": "34343",
+      "category": "mobiles"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "date": "08/05/2024",
+      "total": 242424
+    },
+    {
+      "id": "2",
+      "date": "08/05/2023",
+      "total": 24243343
+    }
+  ]
+}

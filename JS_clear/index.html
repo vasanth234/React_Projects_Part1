@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .cross {
+            font-size: 24px; /* Adjust size as needed */
+            display: inline-block;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s, transform 0.3s;
+            transform-origin: 80% 70%; /* Smooth transition for background color and scale */
+        }
+        .cross:hover {
+            outline: none; /* Remove default focus outline */
+            background-color: aqua; /* Highlight background color */
+            transform: scale(1.8); /* Slightly enlarge the icon */
+            animation-name: usage;
+            animation-duration: 5s;
+        }
+        @keyframes usage {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+        .cross:focus {
+            outline: none; /* Remove default focus outline */
+            background-color: yellow; /* Highlight background color */
+            transform: scale(1.5); /* Slightly enlarge the icon */
+        }
+        .cross:focus-visible {
+            outline: 2px solid blue; /* Optional: Add an outline for better accessibility */
+        }
+        .box {
+            border: 1px solid black;
+            border-radius: 7px;
+            background-color: white;
+            width: 100px;
+            height: 100px;
+        }
+
+        .image{
+            width:50px;
+            height:50px;
+            object-fit: cover;
+            cursor:pointer;
+        }
+
+        .fade-in {
+    opacity: 0;
+    animation: fade-in 1s forwards; /* Apply the fade-in animation */
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="cross" tabindex="0">
+        &times;
+    </div>
+    <div>
+        <img class='image' src="./Img/phone.jpg"/>
+    </div>
+    <div class="box"></div>
+    <script>
+        const doer = document.querySelector('.box');
+const cross = document.querySelector('.cross');
+const img = document.querySelector('.image');
+
+// Fix event listener to pass function reference
+img.addEventListener('click', Imager);
+
+function Imager() {
+    img.classList.add('fade-in');
+}
+
+setInterval(()=>{
+    img.classList.remove('fade-in');
+},1)
+
+window.addEventListener('click', (e) => {
+    if (e.target !== doer && !doer.contains(e.target)) {
+        cross.style.display = 'block';
+    } else {
+        cross.style.display = 'none';
+    }
+});
+
+    </script>
+</body>
+</html>

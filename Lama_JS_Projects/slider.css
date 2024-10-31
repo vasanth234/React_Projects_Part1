@@ -1,0 +1,55 @@
+body{
+    height:100vh;
+    background-color: aqua;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.Container{
+    display:flex;
+  position:relative;
+    gap:50px;
+}
+
+.top{
+    display:flex;
+    align-items:center;
+    gap:50px; 
+}
+.bottom{
+    margin-top:190px;
+}
+
+.frame{
+    width:500px;
+    height:380px;
+  overflow: hidden;
+}
+.slider{
+    display:flex;
+    transition: all 2s ease;
+}
+
+.image{
+    width:100%;
+    height:100%;
+object-fit: cover;
+}
+
+.down{
+    position:absolute;
+    display:flex;
+    gap:30px;
+    margin-top:400px;
+    left:190px;
+ 
+
+}
+
+.button{
+    width:15px;
+    height:15px;
+    border-radius: 50%;
+    border:1px solid black;
+}
